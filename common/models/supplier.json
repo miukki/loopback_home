@@ -1,0 +1,38 @@
+{
+  "name": "Supplier",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "number"
+    },
+    "email": {
+      "type": "string"
+    },
+    "firstDateContact": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": ""
+    },
+    "items": {
+      "type": "hasMany",
+      "model": "Item",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
